@@ -1,8 +1,9 @@
 FROM ubuntu:trusty
+#FROM ubuntu:16.04
 
 MAINTAINER Juergen Jakobitsch <jakobitschj@semantic-web.at>
 
-RUN apt-get install -y wget unzip software-properties-common vim lsof
+RUN apt-get update && apt-get install -y wget unzip software-properties-common vim lsof
 
 RUN  add-apt-repository -y ppa:webupd8team/java
 RUN  apt-get update
